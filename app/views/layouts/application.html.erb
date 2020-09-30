@@ -11,7 +11,13 @@
   </head>
 
    
-  <body>    
+  <body>
+    <% if user_signed_in? %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+    <% else %>
+      <%= link_to 'Log in', new_user_session_path, class: 'btn btn-primary text-white' %>
+      <%= link_to 'Sign Up', new_user_registration_path, class: 'btn btn-primary text-white' %>
+    <% end %>
     <%= yield %>
   </body>
 

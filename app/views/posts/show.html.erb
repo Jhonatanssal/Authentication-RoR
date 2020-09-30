@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
 <h1>
-  <%= @post.title %>
+  <%= @post.title %> by
+  <%= @post.user.username %>
 </h1>
 <p>
   <%= @post.body %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>
