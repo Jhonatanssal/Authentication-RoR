@@ -1,13 +1,21 @@
 <p id="notice"><%= notice %></p>
-<h1>
-  <%= @post.title %> by
-  <%= @post.user.username %>
-</h1>
-<p>
-  <%= @post.body %>
-</p>
+<div class="card my-3 col-6 m-auto">
+  <div class="card-body">
+    <h1 class="card-title">
+      <%= @post.title %>
 
-<% if user_signed_in? %>
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<% end %>
-<%= link_to 'Back', posts_path %>
+      <small class='text-muted'><small><em>
+      <%= username %></em></small></small>
+      
+    </h1>
+    <p class="card-body">
+      <%= @post.body %>
+    </p>
+  </div>
+  <div>  
+    
+    <%= edit_button %>
+
+    <%= link_to 'Back', posts_path, class: 'btn btn-info text-white my-3' %>
+  </div>
+</div>
