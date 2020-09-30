@@ -3312,3 +3312,24 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 1.0ms | Allocations: 6626)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-09-30 11:23:12 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 692)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 5287)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 65ms (Views: 45.4ms | ActiveRecord: 1.0ms | Allocations: 25325)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-30 11:23:20 -0500
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY created_at DESC[0m
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 4570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 17.6ms | ActiveRecord: 0.9ms | Allocations: 10241)
+
+
