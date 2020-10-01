@@ -11,9 +11,7 @@ module ApplicationHelper
     link_to 'New Post', new_post_path, class: 'btn btn-success text-white text-center' if user_signed_in?
   end
 
-  def form_log
-    if user_signed_in?
-      link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-primary text-white'
-    end
+  def form_log    
+    link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-primary text-white' if user_signed_in?
   end
 end
