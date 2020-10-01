@@ -1,4 +1,4 @@
-# rubocop: disable Style/GuardClause, Layout/LineLength
+# rubocop: disable Layout/LineLength
 
 module ApplicationHelper
   def not_log
@@ -18,4 +18,4 @@ module ApplicationHelper
   end
 end
 
-# rubocop: enable Style/GuardClause, Layout/LineLength
+# rubocop: enable Layout/LineLength
