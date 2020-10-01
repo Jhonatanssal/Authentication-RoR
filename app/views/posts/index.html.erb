@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container d-flex flex-column justify-content-center w-100 bg-light py-2">
+
+  <h1 class="text-center">Posts</h1>
+    <% @posts.each do |post| %>
+    <div class="text-center d-flex justify-content-center my-3">
+      <div class="card col-6">
+        <div class="card-body">
+          <h1><%= link_to post.title, post_path(post) %></h1>
+            <%= username(post) %>
+          <p><%= truncate(post.body, length: 50) %></p>
+        </div>
+        <div>
+          <%= edit_button(post) %>
+          <%= destroy_button(post) %>
+        </div>
+      </div>
+    </div>
+      <% end %>
+</div>

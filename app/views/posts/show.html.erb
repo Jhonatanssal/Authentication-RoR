@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<div class="card my-3 col-6 m-auto">
+  <div class="card-body">
+    <h1 class="card-title">
+      <%= @post.title %>
+
+      <small class='text-muted'><small><em>
+      <%= username(@post) %></em></small></small>
+      
+    </h1>
+    <p class="card-body">
+      <%= @post.body %>
+    </p>
+  </div>
+  <div>  
+    
+    <%= edit_button(@post) %>
+    <%= destroy_button(@post) %>
+
+    <%= link_to 'Back', posts_path, class: 'btn btn-info text-white mb-2' %>
+  </div>
+</div>
