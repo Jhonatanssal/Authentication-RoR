@@ -8,16 +8,12 @@
       <div class="card col-6">
         <div class="card-body">
           <h1><%= link_to post.title, post_path(post) %></h1>
-          <% if user_signed_in? %>
-            <p>By: <%= post.user.username %> </p>
-          <% else %>
-            <p>By: Anonymous </p>
-          <% end %>
+            <%= username(post) %>
           <p><%= truncate(post.body, length: 50) %></p>
         </div>
-        <div>    
-          <% if user_signed_in? %>    
-            <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-warning text-white mb-2' %>
+        <div>
+          <%= edit_button(post) %>
+          <% if user_signed_in? %>
             <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger text-white mb-2'%>
           <% end %>
         </div>

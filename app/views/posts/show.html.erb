@@ -5,7 +5,7 @@
       <%= @post.title %>
 
       <small class='text-muted'><small><em>
-      <%= username %></em></small></small>
+      <%= username(@post) %></em></small></small>
       
     </h1>
     <p class="card-body">
@@ -14,8 +14,8 @@
   </div>
   <div>  
     
-    <%= edit_button %>
+    <%= edit_button(@post) %>
 
-    <%= link_to 'Back', posts_path, class: 'btn btn-info text-white my-3' %>
+    <%= link_to 'Back', posts_path, class: 'btn btn-info text-white mb-2' %>
   </div>
 </div>
